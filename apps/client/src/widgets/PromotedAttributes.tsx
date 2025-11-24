@@ -415,6 +415,7 @@ function setupTextLabelAutocomplete(el: HTMLInputElement, valueAttr: Attribute, 
             ]
         );
 
+        $input.off("autocomplete:selected");
         $input.on("autocomplete:selected", onChangeListener);
     });
 }

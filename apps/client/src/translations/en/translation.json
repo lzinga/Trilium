@@ -1309,7 +1309,10 @@
     "title": "Editor"
   },
   "code_mime_types": {
-    "title": "Available MIME types in the dropdown"
+    "title": "Available MIME types in the dropdown",
+    "tooltip_syntax_highlighting": "Syntax highlighting",
+    "tooltip_code_block_syntax": "Code blocks in Text notes",
+    "tooltip_code_note_syntax": "Code notes"
   },
   "vim_key_bindings": {
     "use_vim_keybindings_in_code_notes": "Vim keybindings",

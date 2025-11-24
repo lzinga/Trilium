@@ -4,7 +4,7 @@ import Column from "../../react/Column";
 import FormCheckbox from "../../react/FormCheckbox";
 import FormGroup from "../../react/FormGroup";
 import FormSelect from "../../react/FormSelect";
-import { useTriliumOption, useTriliumOptionBool, useTriliumOptionJson } from "../../react/hooks";
+import { useStaticTooltip, useTriliumOption, useTriliumOptionBool, useTriliumOptionJson } from "../../react/hooks";
 import OptionsSection from "./components/OptionsSection";
 import { useEffect, useMemo, useRef } from "preact/hooks";
 import codeNoteSample from "./samples/code_note.txt?raw";
@@ -14,6 +14,8 @@ import mime_types from "../../../services/mime_types";
 import CheckboxList from "./components/CheckboxList";
 import AutoReadOnlySize from "./components/AutoReadOnlySize";
 import "./code_notes.css";
+import { byMimeType as codeBlockMimeTypes } from "@triliumnext/highlightjs/src/syntax_highlighting";
+import { default as codeNoteMimeTypes } from "@triliumnext/codemirror/src/syntax_highlighting";
 
 const SAMPLE_MIME = "application/typescript";
 
@@ -134,6 +136,27 @@ function CodeMimeTypes() {
 type MimeTypeWithDisabled = MimeType & { disabled?: boolean };
 
 export function CodeMimeTypesList() {
+    const containerRef = useRef<HTMLUListElement>(null);
+    useStaticTooltip(containerRef, {
+        title() {
+            const mime = this.querySelector("input")?.value;
+            if (!mime || mime === "text/plain") return "";
+
+            const hasCodeBlockSyntax = !!codeBlockMimeTypes[mime];
+            const hasCodeNoteSyntax = !!codeNoteMimeTypes[mime];
+
+            return `
+                <strong>${t("code_mime_types.tooltip_syntax_highlighting")}</strong><br/>
+                ${hasCodeBlockSyntax ? "✅" : "❌"} ${t("code_mime_types.tooltip_code_block_syntax")}<br/>
+                ${hasCodeNoteSyntax ? "✅" : "❌"} ${t("code_mime_types.tooltip_code_note_syntax")}
+            `;
+        },
+        selector: "label",
+        placement: "left",
+        fallbackPlacements: [ "left" ],
+        animation: false,
+        html: true
+    });
     const [ codeNotesMimeTypes, setCodeNotesMimeTypes ] = useTriliumOptionJson<string[]>("codeNotesMimeTypes");
     const groupedMimeTypes: Record<string, MimeType[]> = useMemo(() => {
         mime_types.loadMimeTypes();
@@ -160,7 +183,7 @@ export function CodeMimeTypesList() {
     }, [ codeNotesMimeTypes ]);
 
     return (
-        <ul class="options-mime-types">
+        <ul class="options-mime-types" ref={containerRef}>
             {Object.entries(groupedMimeTypes).map(([ initial, mimeTypes ]) => (
                 <section>
                     { initial && <h5>{initial}</h5> }
