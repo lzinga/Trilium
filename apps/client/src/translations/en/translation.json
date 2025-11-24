@@ -1721,7 +1721,7 @@
     "refresh-saved-search-results": "Refresh saved search results",
     "create-child-note": "Create child note",
     "unhoist": "Unhoist",
-    "toggle-sidebar": "Toggle sidebar"
+    "show-sticky-headers": "Use sticky headers"
   },
   "title_bar_buttons": {
     "window-on-top": "Keep Window on Top"

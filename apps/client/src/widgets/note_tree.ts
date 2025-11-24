@@ -142,6 +142,13 @@ const TPL = /*html*/`
             </label>
         </div>
 
+        <div class="form-check">
+            <label class="form-check-label tn-checkbox">
+                <input class="form-check-input show-sticky-headers" type="checkbox" value="">
+                ${t("note_tree.show-sticky-headers")}
+            </label>
+        </div>
+
         <br/>
 
         <button class="btn btn-sm btn-primary save-tree-settings-button" type="submit">${t("note_tree.save-changes")}</button>
@@ -197,6 +204,7 @@ export default class NoteTreeWidget extends NoteContextAwareWidget {
     private $saveTreeSettingsButton!: JQuery<HTMLElement>;
     private $hideArchivedNotesCheckbox!: JQuery<HTMLElement>;
     private $autoCollapseNoteTree!: JQuery<HTMLElement>;
+    private $showStickyHeaders!: JQuery<HTMLElement>;
     private treeName: "main";
     private autoCollapseTimeoutId?: Timeout;
     private lastFilteredHoistedNotePath?: string | null;
@@ -258,6 +266,7 @@ export default class NoteTreeWidget extends NoteContextAwareWidget {
         this.$treeSettingsPopup = this.$widget.find(".tree-settings-popup");
         this.$hideArchivedNotesCheckbox = this.$treeSettingsPopup.find(".hide-archived-notes");
         this.$autoCollapseNoteTree = this.$treeSettingsPopup.find(".auto-collapse-note-tree");
+        this.$showStickyHeaders = this.$treeSettingsPopup.find(".show-sticky-headers");
 
         this.$treeSettingsButton = this.$widget.find(".tree-settings-button");
         this.$treeSettingsButton.on("click", (e) => {
@@ -268,6 +277,7 @@ export default class NoteTreeWidget extends NoteContextAwareWidget {
 
             this.$hideArchivedNotesCheckbox.prop("checked", this.hideArchivedNotes);
             this.$autoCollapseNoteTree.prop("checked", this.autoCollapseNoteTree);
+            this.$showStickyHeaders.prop("checked", this.showStickyHeaders);
 
             const top = this.$treeActions[0].offsetTop - (this.$treeSettingsPopup.outerHeight() ?? 0);
             const left = Math.max(0, this.$treeActions[0].offsetLeft - (this.$treeSettingsPopup.outerWidth() ?? 0) + (this.$treeActions.outerWidth() ?? 0));
@@ -292,6 +302,7 @@ export default class NoteTreeWidget extends NoteContextAwareWidget {
         this.$saveTreeSettingsButton.on("click", async () => {
             await this.setHideArchivedNotes(this.$hideArchivedNotesCheckbox.prop("checked"));
             await this.setAutoCollapseNoteTree(this.$autoCollapseNoteTree.prop("checked"));
+            await this.setShowStickyHeaders(this.$showStickyHeaders.prop("checked"));
 
             this.$treeSettingsPopup.hide();
 
@@ -344,6 +355,14 @@ export default class NoteTreeWidget extends NoteContextAwareWidget {
 
     async setAutoCollapseNoteTree(val: string) {
         await options.save("autoCollapseNoteTree", val.toString());
+    }
+
+    get showStickyHeaders() {
+        return options.is("showStickyHeaders");
+    }
+
+    async setShowStickyHeaders(val: string) {
+        await options.save("showStickyHeaders", val.toString());
     }
 
     initFancyTree() {

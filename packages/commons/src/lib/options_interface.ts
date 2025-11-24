@@ -114,6 +114,7 @@ export interface OptionDefinitions extends KeyboardShortcutsOptions<KeyboardActi
     hideArchivedNotes_main: boolean;
     debugModeEnabled: boolean;
     autoCollapseNoteTree: boolean;
+    showStickyHeaders: boolean;
     dailyBackupEnabled: boolean;
     weeklyBackupEnabled: boolean;
     monthlyBackupEnabled: boolean;

@@ -45,6 +45,7 @@ import WatchedFileUpdateStatusWidget from "../widgets/watched_file_update_status
 import NoteDetail from "../widgets/NoteDetail.jsx";
 import RightPanelWidget from "../widgets/sidebar/RightPanelWidget.jsx";
 import PromotedAttributes from "../widgets/PromotedAttributes.jsx";
+import StickyHeadersWidget from "../widgets/sticky_headers.js";
 
 export default class DesktopLayout {
 
@@ -96,6 +97,7 @@ export default class DesktopLayout {
                         new LeftPaneContainer()
                             .optChild(!launcherPaneIsHorizontal, new QuickSearchWidget())
                             .child(appContext.noteTreeWidget)
+                            .child(new StickyHeadersWidget())
                             .child(...this.customWidgets.get("left-pane"))
                     )
                     .child(

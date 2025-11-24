@@ -56,6 +56,7 @@ const ALLOWED_OPTIONS = new Set<OptionNames>([
     "nativeTitleBarVisible",
     "headingStyle",
     "autoCollapseNoteTree",
+    "showStickyHeaders",
     "autoReadonlySizeText",
     "customDateTimeFormat",
     "autoReadonlySizeCode",

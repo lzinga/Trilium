@@ -111,6 +111,7 @@ const defaultOptions: DefaultOption[] = [
     { name: "debugModeEnabled", value: "false", isSynced: false },
     { name: "headingStyle", value: "underline", isSynced: true },
     { name: "autoCollapseNoteTree", value: "true", isSynced: true },
+    { name: "showStickyHeaders", value: "false", isSynced: false },
     { name: "autoReadonlySizeText", value: "32000", isSynced: false },
     { name: "autoReadonlySizeCode", value: "64000", isSynced: false },
     { name: "dailyBackupEnabled", value: "true", isSynced: false },
