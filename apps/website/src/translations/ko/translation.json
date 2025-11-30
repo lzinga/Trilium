@@ -87,6 +87,8 @@
         "description_arm64": "ARM 기반 리눅스 배포판에서 aarch64 아키텍처와 호환됩니다."
     },
     "note_types": {
-        "text_title": "텍스트 노트"
+        "text_title": "텍스트 노트",
+        "text_description": "노트는 WYSIWYG 편집기를 사용하며 표, 이미지, 수학 표현식, 구문 강조 기능의 코드 블록을 지원합니다. 특수문자를 사용한 마크다운 유사 구문이나 슬래시(/) 명령으로 텍스트 서식을 빠르게 지정할 수 있습니다.",
+        "code_title": "코드 노트"
     }
 }

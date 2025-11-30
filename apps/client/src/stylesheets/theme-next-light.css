@@ -41,6 +41,9 @@
     --cmd-button-keyboard-shortcut-color: black;
     --cmd-button-disabled-opacity: 0.5;
 
+    --button-group-active-button-background: #00000026;
+    --button-group-active-button-text-color: black;
+
     --icon-button-color: currentColor;
     --icon-button-hover-background: var(--hover-item-background-color);
     --icon-button-hover-color: var(--hover-item-text-color);

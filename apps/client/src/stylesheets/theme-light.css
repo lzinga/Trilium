@@ -92,3 +92,7 @@ html {
 .board-note {
     color: var(--light-theme-custom-color, inherit);
 }
+
+.use-note-color {
+    --custom-color: var(--light-theme-custom-color);
+}

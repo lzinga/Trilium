@@ -39,12 +39,12 @@ function createClassForColor(colorString: string | null) {
         </style>`);
 
         registeredClasses.add(className);
-        if (hue) {
+        if (hue !== undefined) {
             colorsWithHue.add(className);
         }
     }
 
-    return clsx(className, colorsWithHue.has(className) && "with-hue");
+    return clsx("use-note-color", className, colorsWithHue.has(className) && "with-hue");
 }
 
 function parseColor(color: string) {

@@ -129,7 +129,6 @@ const defaultOptions: DefaultOption[] = [
     { name: "logRetentionDays", value: "90", isSynced: false }, // default 90 days
     { name: "customSearchEngineName", value: "DuckDuckGo", isSynced: true },
     { name: "customSearchEngineUrl", value: "https://duckduckgo.com/?q={keyword}", isSynced: true },
-    { name: "promotedAttributesOpenInRibbon", value: "true", isSynced: true },
     { name: "editedNotesOpenInRibbon", value: "true", isSynced: true },
     { name: "mfaEnabled", value: "false", isSynced: false },
     { name: "mfaMethod", value: "totp", isSynced: false },

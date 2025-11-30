@@ -112,6 +112,7 @@
   },
   "help": {
     "title": "Cheatsheet",
+    "editShortcuts": "Edit keyboard shortcuts",
     "noteNavigation": "Note navigation",
     "goUpDown": "go up/down in the list of notes",
     "collapseExpand": "collapse/expand node",

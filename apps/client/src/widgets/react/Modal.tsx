@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { useEffect, useRef, useMemo } from "preact/hooks";
 import { t } from "../../services/i18n";
 import { ComponentChildren } from "preact";
@@ -7,9 +8,16 @@ import { Modal as BootstrapModal } from "bootstrap";
 import { memo } from "preact/compat";
 import { useSyncedRef } from "./hooks";
 
+interface CustomTitleBarButton {
+    title: string;
+    iconClassName: string;
+    onClick: () => void;
+}
+
 interface ModalProps {
     className: string;
     title: string | ComponentChildren;
+    customTitleBarButtons?: (CustomTitleBarButton | null)[];
     size: "xl" | "lg" | "md" | "sm";
     children: ComponentChildren;
     /**
@@ -72,7 +80,7 @@ interface ModalProps {
     noFocus?: boolean;
 }
 
-export default function Modal({ children, className, size, title, header, footer, footerStyle, footerAlignment, onShown, onSubmit, helpPageId, minWidth, maxWidth, zIndex, scrollable, onHidden: onHidden, modalRef: externalModalRef, formRef, bodyStyle, show, stackable, keepInDom, noFocus }: ModalProps) {
+export default function Modal({ children, className, size, title, customTitleBarButtons: titleBarButtons, header, footer, footerStyle, footerAlignment, onShown, onSubmit, helpPageId, minWidth, maxWidth, zIndex, scrollable, onHidden: onHidden, modalRef: externalModalRef, formRef, bodyStyle, show, stackable, keepInDom, noFocus }: ModalProps) {
     const modalRef = useSyncedRef<HTMLDivElement>(externalModalRef);
     const modalInstanceRef = useRef<BootstrapModal>();
     const elementToFocus = useRef<Element | null>();
@@ -148,7 +156,17 @@ export default function Modal({ children, className, size, title, header, footer
                         {helpPageId && (
                             <button className="help-button" type="button" data-in-app-help={helpPageId} title={t("modal.help_title")}>?</button>
                         )}
+
+                        {titleBarButtons?.filter((b) => b !== null).map((titleBarButton) => (
+                            <button type="button"
+                                    className={clsx("custom-title-bar-button bx", titleBarButton.iconClassName)}
+                                    title={titleBarButton.title}
+                                    onClick={titleBarButton.onClick}>
+                            </button>
+                        ))}
+                        
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label={t("modal.close")}></button>
+
                     </div>
 
                     {onSubmit ? (

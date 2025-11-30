@@ -2098,7 +2098,6 @@
   "read-only-info": {
     "read-only-note": "目前正在檢視唯讀筆記。",
     "auto-read-only-note": "此筆記以唯讀模式顯示以加快載入速度。",
-    "auto-read-only-learn-more": "了解更多",
     "edit-note": "編輯筆記"
   },
   "note-color": {

@@ -60,6 +60,11 @@ export default function PopupEditor() {
             <DialogWrapper>
                 <Modal
                     title={<TitleRow />}
+                    customTitleBarButtons={[{
+                        iconClassName: "bx-expand-alt",
+                        title: "Switch to full editor",
+                        onClick: () => {/* TO DO */}
+                    }]}
                     className="popup-editor-dialog"
                     size="lg"
                     show={shown}

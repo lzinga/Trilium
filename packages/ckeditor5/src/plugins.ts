@@ -1,5 +1,5 @@
 import { Autoformat, AutoLink, BlockQuote, BlockToolbar, Bold, CKFinderUploadAdapter, Clipboard, Code, CodeBlock, Enter, FindAndReplace, Font, FontBackgroundColor, FontColor, GeneralHtmlSupport, Heading, HeadingButtonsUI, HorizontalLine, Image, ImageCaption, ImageInline, ImageResize, ImageStyle, ImageToolbar, ImageUpload, Alignment, Indent, IndentBlock, Italic, Link, List, ListProperties, Mention, PageBreak, Paragraph, ParagraphButtonUI, PasteFromOffice, PictureEditing, RemoveFormat, SelectAll, ShiftEnter, SpecialCharacters, SpecialCharactersEssentials, Strikethrough, Style, Subscript, Superscript, Table, TableCaption, TableCellProperties, TableColumnResize, TableProperties, TableSelection, TableToolbar, TextPartLanguage, TextTransformation, TodoList, Typing, Underline, Undo, Bookmark, Emoji, Notification, EmojiMention, EmojiPicker } from "ckeditor5";
-import { SlashCommand, Template } from "ckeditor5-premium-features";
+import { SlashCommand, Template, FormatPainter } from "ckeditor5-premium-features";
 import type { Plugin } from "ckeditor5";
 import CutToNotePlugin from "./plugins/cuttonote.js";
 import UploadimagePlugin from "./plugins/uploadimage.js";
@@ -83,7 +83,8 @@ export const CORE_PLUGINS: typeof Plugin[] = [
  */
 export const PREMIUM_PLUGINS: typeof Plugin[] = [
     SlashCommand,
-    Template
+    Template,
+	FormatPainter
 ];
 
 /**

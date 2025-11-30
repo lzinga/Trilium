@@ -109,3 +109,6 @@ body .todo-list input[type="checkbox"]:not(:checked):before {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6) !important;
 }
 
+.use-note-color {
+    --custom-color: var(--dark-theme-custom-color);
+}

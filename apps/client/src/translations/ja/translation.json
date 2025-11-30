@@ -312,7 +312,8 @@
     "moveNoteUpDown": "ノートリストでノートを上/下に移動",
     "notSet": "未設定",
     "goUpDown": "ノートのリストで上下する",
-    "editBranchPrefix": "アクティブノートのクローンの <a class=\"external\" href=\"https://triliumnext.github.io/Docs/Wiki/tree-concepts.html#prefix\">プレフィックス</a> を編集する"
+    "editBranchPrefix": "アクティブノートのクローンの <a class=\"external\" href=\"https://triliumnext.github.io/Docs/Wiki/tree-concepts.html#prefix\">プレフィックス</a> を編集する",
+    "editShortcuts": "キーボードショートカットを編集"
   },
   "import": {
     "importIntoNote": "ノートにインポート",
@@ -2098,7 +2099,6 @@
   "read-only-info": {
     "read-only-note": "現在、読み取り専用のノートを表示しています。",
     "auto-read-only-note": "このノートは読み込みを高速化するために読み取り専用モードで表示されています。",
-    "auto-read-only-learn-more": "さらに詳しく",
     "edit-note": "ノートを編集"
   },
   "note-color": {

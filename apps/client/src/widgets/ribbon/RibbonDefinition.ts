@@ -26,7 +26,7 @@ export const RIBBON_TAB_DEFINITIONS: TabConfiguration[] = [
             && !(await noteContext?.isReadOnly()),
         toggleCommand: "toggleRibbonTabClassicEditor",
         content: FormattingToolbar,
-        activate: true,
+        activate: () => !options.is("editedNotesOpenInRibbon"),
         stayInDom: true
     },
     {
@@ -50,7 +50,7 @@ export const RIBBON_TAB_DEFINITIONS: TabConfiguration[] = [
         icon: "bx bx-calendar-edit",
         content: EditedNotesTab,
         show: ({ note }) => note?.hasOwnedLabel("dateNote"),
-        activate: ({ note }) => (note?.getPromotedDefinitionAttributes().length === 0 || !options.is("promotedAttributesOpenInRibbon")) && options.is("editedNotesOpenInRibbon")
+        activate: () => options.is("editedNotesOpenInRibbon")
     },
     {
         title: t("book_properties.book_properties"),

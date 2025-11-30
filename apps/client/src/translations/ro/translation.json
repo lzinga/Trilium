@@ -2097,7 +2097,6 @@
   "read-only-info": {
     "read-only-note": "Vizualizați o notiță în modul doar în citire.",
     "auto-read-only-note": "Această notiță este afișată în modul doar în citire din motive de performanță.",
-    "auto-read-only-learn-more": "Mai multe detalii",
     "edit-note": "Editează notița"
   },
   "calendar_view": {

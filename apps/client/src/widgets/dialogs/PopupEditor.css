@@ -33,8 +33,8 @@ body.mobile .modal.popup-editor-dialog .modal-dialog {
     align-items: center;
 }
 
-.modal.popup-editor-dialog .modal-header .title-row > * {
-    margin: 5px;
+.modal.popup-editor-dialog .modal-header .note-title-widget {
+    margin-top: 8px;
 }
 
 .modal.popup-editor-dialog .modal-body {
@@ -66,12 +66,17 @@ body.mobile .modal.popup-editor-dialog .modal-dialog {
     background-color: transparent;
 }
 
+.modal.popup-editor-dialog div.promoted-attributes-container {
+    margin-block: 0;
+}
+
 .modal.popup-editor-dialog .classic-toolbar-widget {
     position: sticky;
+    margin-inline: 8px;
     top: 0;
     inset-inline-start: 0;
     inset-inline-end: 0;
-    background: transparent;
+    background: var(--modal-background-color);
     z-index: 998;
     align-items: flex-start;
 }

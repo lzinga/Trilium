@@ -21,7 +21,7 @@
         "note_structure_description": "Notizen lassen sich hierarchisch anordnen. Ordner sind nicht nötig, da jede Notiz Unternotizen enthalten kann. Eine einzelne Notiz kann an mehreren Stellen in der Hierarchie hinzugefügt werden.",
         "hoisting_description": "Trennen Sie Ihre persönlichen und beruflichen Notizen ganz einfach, indem Sie sie in einem Arbeitsbereich gruppieren. Dadurch wird Ihre Notizstruktur so fokussiert, dass nur ein bestimmter Satz von Notizen angezeigt wird.",
         "hoisting_title": "Arbeitsbereiche und Fokusansicht",
-        "attributes_description": "Nutzen Sie Verbindungen zwischen Notizen oder fügen Sie Labels hinzu, um die Kategorisierung zu erleichtern. Mit hervorgehobenen („promoted“) Attributen können Sie strukturierte Informationen erfassen, die sich direkt in Tabellen und Boards verwenden lassen."
+        "attributes_description": "Verwenden Sie Beziehungen zwischen Notizen oder fügen Sie Beschriftungen hinzu, um die Kategorisierung zu vereinfachen. Verwenden Sie hervorgehobene Attribute, um strukturierte Informationen einzugeben, die in Tabellen und Boards verwendet werden können."
     },
     "productivity_benefits": {
         "revisions_title": "Notizrevisionen",

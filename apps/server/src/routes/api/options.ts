@@ -80,7 +80,6 @@ const ALLOWED_OPTIONS = new Set<OptionNames>([
     "disableTray",
     "customSearchEngineName",
     "customSearchEngineUrl",
-    "promotedAttributesOpenInRibbon",
     "editedNotesOpenInRibbon",
     "locale",
     "formattingLocale",

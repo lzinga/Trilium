@@ -2096,7 +2096,6 @@
   "read-only-info": {
     "read-only-note": "Actualmente, está viendo una nota de solo lectura.",
     "auto-read-only-note": "Esta nota se muestra en modo de solo lectura para una carga más rápida.",
-    "auto-read-only-learn-more": "Para saber más",
     "edit-note": "Editar nota"
   },
   "calendar_view": {

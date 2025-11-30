@@ -146,6 +146,14 @@ button.btn.btn-success kbd {
     outline: 2px solid var(--input-focus-outline-color);
 }
 
+/* Button groups */
+
+/* Active button */
+:root .btn-group button.btn.active {
+    background-color: var(--button-group-active-button-background);
+    color: var(--button-group-active-button-text-color);
+}
+
 /* 
  * Input boxes
  */

@@ -1448,6 +1448,14 @@ div.promoted-attribute-cell .multiplicity:has(span) span {
     justify-content: center;
 }
 
+div.promoted-attribute-cell.promoted-attribute-label-color {
+    justify-content: space-between;
+}
+
+div.promoted-attribute-cell.promoted-attribute-label-color .input-group {
+    width: auto;
+}
+
 /*
  * Floating buttons
  */

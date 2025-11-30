@@ -2097,7 +2097,6 @@
   "read-only-info": {
     "read-only-note": "Aktuelle Notiz wird im Lese-Modus angezeigt.",
     "auto-read-only-note": "Diese Notiz wird im Nur-Lesen-Modus angezeigt, um ein schnelleres Laden zu ermöglichen.",
-    "auto-read-only-learn-more": "Mehr erfahren",
     "edit-note": "Notiz bearbeiten"
   },
   "calendar_view": {

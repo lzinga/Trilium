@@ -2098,7 +2098,6 @@
   "read-only-info": {
     "read-only-note": "当前正在查看一个只读笔记。",
     "auto-read-only-note": "这条笔记以只读模式显示便于快速加载。",
-    "auto-read-only-learn-more": "了解更多",
     "edit-note": "编辑笔记"
   },
   "note-color": {

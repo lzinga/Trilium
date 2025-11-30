@@ -41,6 +41,9 @@
     --cmd-button-keyboard-shortcut-color: white;
     --cmd-button-disabled-opacity: 0.5;
 
+    --button-group-active-button-background: #ffffff4e;
+    --button-group-active-button-text-color: white;
+
     --icon-button-color: currentColor;
     --icon-button-hover-background: var(--hover-item-background-color);
     --icon-button-hover-color: var(--hover-item-text-color);
@@ -305,4 +308,8 @@ body .todo-list input[type="checkbox"]:not(:checked):before {
     --modal-background-color: hsl(var(--custom-color-hue), 8.8%, 11.2%);
     --modal-border-color: hsl(var(--custom-color-hue), 9.4%, 25.1%);
     --promoted-attribute-card-background-color: hsl(var(--custom-color-hue), 13.2%, 20.8%);
+}
+
+.use-note-color {
+    --custom-color: var(--dark-theme-custom-color);
 }

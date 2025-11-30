@@ -1,5 +1,5 @@
 import { ConvertToAttachmentResponse } from "@triliumnext/commons";
-import { FormDropdownDivider, FormListItem } from "../react/FormList";
+import { FormDropdownDivider, FormListHeader, FormListItem } from "../react/FormList";
 import { isElectron as getIsElectron, isMac as getIsMac } from "../../services/utils";
 import { ParentComponent } from "../react/react_utils";
 import { t } from "../../services/i18n"
@@ -113,8 +113,7 @@ function NoteContextMenu({ note, noteContext }: { note: FNote, noteContext?: Not
 function DevelopmentActions({ note }: { note: FNote }) {
     return (
         <>
-            <FormDropdownDivider />
-            <FormListItem disabled>Development-only Actions</FormListItem>
+            <FormListHeader text="Development-only Actions" />
             <FormListItem
                 icon="bx bx-printer"
                 onClick={() => window.open(`/?print=#root/${note.noteId}`, "_blank")}
