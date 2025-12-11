@@ -11,6 +11,8 @@ import link from "../../../services/link";
 import Icon from "../../react/Icon";
 import tree from "../../../services/tree";
 import { useNoteLabel, useNoteLabelBoolean } from "../../react/hooks";
+import Button from "../../react/Button";
+import { t } from "../../../services/i18n";
 
 type GalleryConfig = {
     columns?: number;
@@ -42,6 +44,7 @@ export default function GalleryView({
         }),
         [viewConfig]
     );
+
 
     // Fetch metadata and sort notes
     useEffect(() => {
@@ -144,9 +147,24 @@ export default function GalleryView({
         ).finally(onReady);
     }, [sortedPageNotes, onReady, media]);
 
+    const handleUploadClick = () => {
+        // TODO: Implement image upload functionality
+        console.log("Upload button clicked - implementation pending");
+    };
+
     return (
         <div className="gallery-view note-list">
             <div className="note-list-wrapper">
+                <div className="gallery-header">
+                    {note.type !== "search" && (
+                        <Button
+                            icon="bx bx-upload"
+                            text={t("gallery_view.upload-images")}
+                            onClick={handleUploadClick}
+                        />
+                    )}
+                </div>
+
                 <Pager {...pagination} />
 
                 <div

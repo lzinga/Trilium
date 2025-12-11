@@ -50,3 +50,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+
+.gallery-view .gallery-header {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
