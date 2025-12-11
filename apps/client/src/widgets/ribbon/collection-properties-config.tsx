@@ -72,6 +72,31 @@ interface BookContext {
 }
 
 export const bookPropertiesConfig: Record<ViewTypeOptions, BookConfig> = {
+    gallery: {
+        properties: [
+            {
+                label: t("book_properties_config.show-notes"),
+                type: "checkbox",
+                bindToLabel: "gallery:showNotes",
+            },
+            {
+                label: t("book_properties_config.hide-child-galleries"),
+                type: "checkbox",
+                bindToLabel: "gallery:hideChildGalleries",
+            },
+            {
+                label: t("book_properties_config.sort-by"),
+                type: "combobox",
+                bindToLabel: "gallery:sortBy",
+                defaultValue: "newest",
+                options: [
+                    { value: "newest", label: t("book_properties_config.sort-newest-first") },
+                    { value: "oldest", label: t("book_properties_config.sort-oldest-first") },
+                    { value: "title", label: t("book_properties_config.sort-title") }
+                ]
+            }
+        ]
+    },
     grid: {
         properties: []
     },

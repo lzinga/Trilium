@@ -47,6 +47,10 @@ type Labels = {
     "presentation:theme": string;
     "slide:background": string;
 
+    "gallery:sortBy": string;
+    "gallery:showNotes": boolean;
+    "gallery:hideChildGalleries": boolean;
+
     // Note-type specific
     webViewSrc: string;
     readOnly: boolean;

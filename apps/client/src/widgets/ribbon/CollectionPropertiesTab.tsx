@@ -21,7 +21,8 @@ const VIEW_TYPE_MAPPINGS: Record<ViewTypeOptions, string> = {
   table: t("book_properties.table"),
   geoMap: t("book_properties.geo-map"),
   board: t("book_properties.board"),
-  presentation: t("book_properties.presentation")
+  presentation: t("book_properties.presentation"),
+  gallery: t("book_properties.gallery")
 };
 
 export default function CollectionPropertiesTab({ note }: TabContext) {

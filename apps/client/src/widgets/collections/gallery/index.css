@@ -1,0 +1,52 @@
+.gallery-view .gallery-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery-card {
+  background: var(--main-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .06s ease-in-out, box-shadow .06s ease-in-out;
+}
+
+.gallery-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-m);
+}
+
+.gallery-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-box);
+  overflow: hidden;
+}
+
+.gallery-img,
+.gallery-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-fallback {
+  width: 100%;
+  height: 100%;
+  color: var(--muted-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.gallery-caption {
+  padding: 6px 8px;
+  font-size: 12px;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

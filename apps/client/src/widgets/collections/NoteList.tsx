@@ -47,6 +47,9 @@ const ViewComponents: Record<ViewTypeOptions, { normal: LazyLoadedComponent, pri
     },
     presentation: {
         normal: lazy(() => import("./presentation/index.js"))
+    },
+    gallery: {
+        normal: lazy(() => import("./gallery/index.js"))
     }
 }
 
